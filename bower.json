@@ -1,0 +1,22 @@
+{
+  "name": "myServer",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/areeyo/myServer1",
+  "authors": [
+    "areeyo <yakeemo2@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "angular": "~1.3.1"
+  }
+}
