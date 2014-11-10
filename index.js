@@ -1,16 +1,17 @@
 var express = require('express')
+var mongojs = require('mongojs')
 var app = express()
+var db = mongojs('my_server', ['book']);
 
 app.use(express.static(__dirname + '/public'));
 
+
 app.get('/api/book',function(req,res){
-	var books = [
-		{title: 'Strange', price: 100},
-		{title: 'Agu', price: 100},
-		{title: 'Int', price: 100}
-	];
-	res.send(books);
-})
+	db.book.find({}, function(err, docs){
+		res.send(docs);
+	});
+});
+
 
 var server = app.listen(3000, function () {
 
